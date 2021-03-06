@@ -10,10 +10,10 @@
 
 ## Setup
 The project is created on Jupyter Notebook. The following packages are installed. These packages can be installed via conda or pip.
-Pandas
-Numpy
-Matplotlib
-Seaborn
+* Pandas
+* Numpy
+* Matplotlib
+* Seaborn
 
 ## Project Overview - Investigate a dataset
 In this project, I went through the data analysis process and saw how everything fits together.
@@ -24,6 +24,7 @@ the answer for the following questions using the exploratory analysis:
    2.Do people who participate in the Bolsa Família programe are more willing to show up for the appointment?
    3.Are people with preexisting medical conditions are more willing to missed their appointment?
 In the project I have went through several steps - data wrangling, data cleaning amd exploratory data analysis where after the cleaning of the data I was able to find the answers of the listed questions and to make conclusions.
+
 ## Data Wrangling
 Statistics were computed to find out the probabilities of converting regardless of page. These were used to analyze if one page or the other led to more conversions.
 
