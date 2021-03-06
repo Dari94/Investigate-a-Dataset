@@ -6,6 +6,8 @@
 * [Data Wrangling](#Data_Wranging)
 * [Data Cleaning](#Data_Cleaning)
 * [Exploratory Data Analysis](#Exploratory_Data_Analysis)
+* [Vizualization](#Vizualization)
+* [Limitations](#Limitations)
 * [Conclusion](#Conclusion)
 
 ## Setup
@@ -26,13 +28,26 @@ the answer for the following questions using the exploratory analysis:
 In the project I have went through several steps - data wrangling, data cleaning amd exploratory data analysis where after the cleaning of the data I was able to find the answers of the listed questions and to make conclusions.
 
 ## Data Wrangling
-Statistics were computed to find out the probabilities of converting regardless of page. These were used to analyze if one page or the other led to more conversions.
+In this part I have investigate the chosen dataset which is attached in the project.The dataset contains information for people who are not showing for their appointments.I have read the file,creating a dataframe,showing the shape of the dataset and find the datatypes of each column.
 
 ## Data Cleaning
-The A/B testing was conducted assuming the old page is better unless the new page proves to be definitely better at a Type I error rate of 5%. The data was bootstrapped and sampling distributions were determined for both pages. Conclusions were drawn on conversions for both pages by calculating p-values.
+Based on the previous investigations I was able to do a data cleaning in this part of the project. I have renamed the existing columns to more readable names and converted them to lowercase. I have also changed the wrong datatypes. I got rid of the wrong records( ex: people with negative age) using the clip() function to trim values at input threshold(0,95). I have creaetd a new column named 'age group' using bin to group people in common age groups. I have shifhted formward with 1 day the appointment day because in some records the scheduled day was after the appointment day.
 
 ## Exploratory Data Analysis
-Logistic regression was then performed to confirm results of the previous steps. Null and alternative hypotheses associated with this regression model were stated and verified using statsmodel.
+In this part of the project I have observed the listed questions using different pandas functions.I have used groupby function to group people into groups and to make some findings about the dataset.I have created a custom function to plot no show rate by age groups across other variables in order to avoid repetitive code.
 
+## Vizualizations
+To ansswer the 1st question I have used a bar chart to describe number of no shows across age groups and line chart to describe number of no shows across age groups and gender.
+To answer the 2nd question  I have used a bar chart to express no show rate by age groups across scholarship.
+To answer the 3rd question I have used a line chart to expressno show rate by age groups across different preexisting diseases- diabetes, hypertension,alcoholism.
+
+## Limitations
+Despite the fact that there were no null values in the data set there were a bunch of iconsistent data. In the age column some of the rows were equal to -1 which is irrelevant - you can not be on negative age so I was forced to drop all the rows where the age was -1. Also there was a misconsistence between the appointment and scheduled day so I had to shift the appointment day with one day foreward. After a plenty of data cleaning I came up with a more appropriate data set in which I could made some conclusions about my findings.
 ## Conclusion
-Based on the statistical tests I used, the Z-test, logistic regression model, and actual difference observed, the results have shown that the new and old page have an approximately equal chance of converting users. We fail to reject the null hypothesis. Overall there is not enough evidence on deciding to switch to the new page rather than stay with the old one so I recommend to the e-commerce company to keep the old page.
+After the analysis that I have done I came up with several findings:
+
+With age people tend to attend more their appointments and people from age group 13-17 are missing their appointments the most.
+Gender doesn't affect people's decision about showing for the appointment or not.
+People who participate in the schoolarship programme are more willing to miss their appointments.
+People who suffer from any disease are more willing to show for their apointment.
+When I explored the no show rate by age I found that people from age group(18 to 24) who have diabetes and hypertension have the highest rate of no shows.
